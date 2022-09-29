@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 #浏览器窗口最大化
 driver.get('http://192.168.3.12:8100/#/login')
-#浏览器打开百度
+#浏览器打开考试系统
 sleep(2)
 driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('admin')
 #用户名
