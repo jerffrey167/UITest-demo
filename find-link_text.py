@@ -9,7 +9,9 @@ driver.maximize_window()
 driver.get('http://www.baidu.com')
 #浏览器打开百度
 sleep(2)
-driver.find_element(By.PARTIAL_LINK_TEXT,'123').click()
+#driver.find_element(By.PARTIAL_LINK_TEXT,'123').click()
+#
+driver.find_element(By.LINK_TEXT,'hao123').click()
 #链接文本包含定位，所填写内容必须为全部内容
 sleep(2)
 driver.close()

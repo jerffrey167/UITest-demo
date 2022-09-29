@@ -94,7 +94,7 @@ sleep(1)
 driver.find_element(By.XPATH,"//span[text()='           确定         ']//..").click()
 sleep(1)
 ################################账号注销
-driver.find_element(By.XPATH,"//div[@class='avatar-wrapper el-dropdown-selfdefine     ']").click()
+driver.find_element(By.XPATH,"//div[@aria-controls='dropdown-menu-8885']").click()
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()='退出登录']//..").click()
 ##################

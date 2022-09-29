@@ -10,6 +10,7 @@ driver.get('http://www.baidu.com')
 #浏览器打开百度
 sleep(2)
 inputs = driver.find_elements(By.TAG_NAME,'input')
+
 #tag定位搜索框输入 tag定位
 # 如果定位到的元素不止1个，那么就需要用到find_elements 的方法
 sleep(2)
