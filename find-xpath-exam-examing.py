@@ -8,9 +8,9 @@ driver.maximize_window()
 driver.get('http://192.168.3.12:8100/#/login')
 #浏览器打开考试系统
 sleep(2)
-driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('person')
+driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('s2')
 #用户名
-driver.find_element(By.XPATH,'//input[@type="password"]').send_keys('person')
+driver.find_element(By.XPATH,'//input[@type="password"]').send_keys('123456')
 #密码
 driver.find_element(By.XPATH,'//button[@type="button"]').click()
 #登录按钮
@@ -91,10 +91,11 @@ driver.find_element(By.XPATH,"//*[contains(text(),'B.')]//..").click()
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()=' 交卷 ']//..").click()
 sleep(1)
-driver.find_element(By.XPATH,"//span[text()='           确定         ']//..").click()
+element=driver.find_element(By.XPATH,"//*[@aria-label='提示']/div")
+element1=element.find_element(By.XPATH,"//*[@aria-label='提示']//button[2]").click()
 sleep(1)
 ################################账号注销
-driver.find_element(By.XPATH,"//div[@aria-controls='dropdown-menu-8885']").click()
+driver.find_element(By.XPATH,"//div[text()=' 学员2 ']").click()
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()='退出登录']//..").click()
 ##################
