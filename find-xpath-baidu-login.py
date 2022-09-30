@@ -2,7 +2,7 @@ from  selenium import  webdriver
 from  time import  sleep
 from  selenium.webdriver.common.by import By
 '''
-商城购物流程
+百度登录框
 '''
 driver = webdriver.Chrome()
 # 打开浏览器
