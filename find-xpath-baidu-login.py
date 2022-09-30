@@ -8,21 +8,17 @@ driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
 #浏览器窗口最大化
-driver.get('http://192.168.3.12:88/')
-#浏览器打开商城网站
+driver.get('https://www.baidu.com/')
+#浏览器打开baidu网站
 sleep(2)
-driver.find_element(By.XPATH,"//a[text()='登录']").click()
+driver.find_element(By.XPATH,'//*[@id="s-top-loginbtn"]').click()
+#打开登录弹出框
 sleep(1)
-#进入登录页面
-driver.find_element(By.XPATH,'//*[@id="loginAccount"]').send_keys('jerffrey')
-driver.find_element(By.XPATH,'//*[@id="loginPassword"]').send_keys('12345678')
-driver.find_element(By.XPATH,"//button[text()='会员登录']").click()
-sleep(1)
-###########账号登录  //div[@class='xm-goods-item']
-driver.find_element(By.XPATH,"//a[text()='电视']").click()
-sleep(1)
-
-
+element=driver.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
+element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').send_keys('1111')
+element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
+element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
+sleep(2)
 driver.close()
 #关闭浏览器器进程
 driver.quit()
