@@ -19,6 +19,7 @@ element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').s
 element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
 element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
 sleep(2)
+########先进入层级，然后在层级中再寻找元素
 driver.close()
 #关闭浏览器器进程
 driver.quit()

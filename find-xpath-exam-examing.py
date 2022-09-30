@@ -16,7 +16,8 @@ driver.find_element(By.XPATH,'//button[@type="button"]').click()
 #登录按钮
 sleep(1)
 driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 20px')]/span[text()='在线考试']").click()
-#点击在线考试模块
+sleep(1)
+driver.find_element(By.XPATH,'//*[@id="screenfull"]/*[@class="svg-icon"]').click()
 sleep(1)
 driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 40px')]/span[text()='在线考试']").click()
 #点击在线考试页面
