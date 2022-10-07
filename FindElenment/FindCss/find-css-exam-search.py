@@ -22,10 +22,9 @@ driver.find_element(By.CSS_SELECTOR,'button[type="button"]').click()
 #登录按钮
 sleep(1)
 driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 20px')]/span[text()='考试管理']/..").click()
-driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 20px')]/span[text()='考试管理']").click()
-#点击考试管理模块
 sleep(1)
 driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 40px')]/span[text()='考试管理']").click()
+#点击考试管理模块
 sleep(1)
 ######################考试类型搜索框
 #driver.find_element(By.XPATH,'//input[@placeholder="开放类型"]').click()
@@ -34,7 +33,7 @@ sleep(1)
 # ExamSearch=driver.find_element(By.XPATH,"//div[@class='el-select-dropdown el-popper'and@x-placement]")
 # ExamSearch1=driver.find_element(By.XPATH,"//span[text()='完全开放']//..").click()
 ExamSearch=driver.find_element(By.CSS_SELECTOR,"div[class='el-select-dropdown el-popper'][x-placement]")
-ExamSearch1=driver.find_element(By.CSS_SELECTOR,"li.el-select-dropdown__item").click()
+ExamSearch1=ExamSearch.find_element(By.CSS_SELECTOR,"li.el-select-dropdown__item").click()
 sleep(1)
 ######################考试名称搜索框
 driver.find_element(By.XPATH,'//input[@placeholder="搜索考试名称"]').send_keys('演示考试')
