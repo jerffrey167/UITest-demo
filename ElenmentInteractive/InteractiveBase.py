@@ -31,12 +31,17 @@ sleep(1)
 driver.find_element(By.CSS_SELECTOR,'input[placeholder="请选择"]').click()
 sleep(1)
 ExamSearch=driver.find_element(By.CSS_SELECTOR,"div[class='el-select-dropdown el-popper'][x-placement]")
+##################################勾选全选框
 ExamSearch1=ExamSearch.find_element(By.CSS_SELECTOR,"li.el-select-dropdown__item").click()
 sleep(1)
 ##################选择勾选框框
-driver.find_element(By.XPATH,"//table[@class='el-table__body']/tbody/tr[1]/td/div/label").click()
-sleep(1)
-driver.find_element(By.XPATH,"//table[@class='el-table__body']/tbody/tr[1]/td/div/label").click()
+cells = driver.find_elements(By.CSS_SELECTOR,"[class='el-checkbox__inner']")
+print('勾选框的数量是',len(cells))
+for cell in cells:
+    sleep(1)
+    cell.click()
+sleep(2)
+
 ################################账号注销
 driver.find_element(By.XPATH,"//div[text()=' 超管A ']").click()
 sleep(1)

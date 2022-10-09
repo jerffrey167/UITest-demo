@@ -12,6 +12,7 @@ driver.get('https://mail.163.com/')
 sleep(2)
 iframe = driver.find_element(By.XPATH,'//*[@frameborder="0"]')
 driver.switch_to.frame(iframe)
+
 #############切换到对应的iframe中
 driver.find_element(By.XPATH,'//*[@name="email"]').send_keys('username')
 

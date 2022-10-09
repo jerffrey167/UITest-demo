@@ -12,12 +12,19 @@ driver.get('https://www.baidu.com/')
 #浏览器打开baidu网站
 sleep(2)
 driver.find_element(By.XPATH,'//*[@id="s-top-loginbtn"]').click()
-#打开登录弹出框
+#打开登录弹出框 
 sleep(1)
-element=driver.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
-element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').send_keys('1111')
-element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
-element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
+# element=driver.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
+# element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').send_keys('1111')
+# element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
+# element1=element.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
+
+#####################################switch to 方法
+driver.switch_to.active_element.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
+driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').send_keys('1111')
+driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
+driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
+
 sleep(2)
 ########先进入层级，然后在层级中再寻找元素
 driver.close()
