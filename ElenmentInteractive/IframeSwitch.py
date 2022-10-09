@@ -22,7 +22,6 @@ driver.find_element(By.XPATH,'//*[@name="password"]').clear()
 
 driver.switch_to.default_content()
 ###############切换回主干页面
-sleep(1)
 driver.find_element(By.XPATH,"//a[text()='企业邮箱']").click()
 
 
