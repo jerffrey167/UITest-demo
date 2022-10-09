@@ -10,17 +10,17 @@ driver.get('http://www.baidu.com')
 #浏览器打开百度
 sleep(2)
 a = driver.find_element(By.XPATH,"//div[@id='s-top-left']/a[1]").text
-print('a is',a)
+print('a的文本 is',a)
 b = driver.find_element(By.XPATH,"//div[@id='s-top-left']/a[1]").get_attribute("href")
-print('b is',b)
+print('b的href属性的值 is',b)
 c = driver.find_element(By.XPATH,"//div[@id='s-top-left']/a[1]").location
-print('c is',c)
+print('c的坐标 is',c)
 d = driver.find_element(By.XPATH,"//*[@id='kw']").is_displayed()
-print('d is',d)
+print('d的是否存在 is',d)
 e = driver.find_element(By.XPATH,"//*[@id='kw']").is_enabled()
-print('e is',e)
+print('e的是否被点击 is',e)
 f = driver.find_element(By.XPATH,"//*[@id='kw']").is_selected()
-print('f is',f)
+print('f的是否被选中 is',f)
 sleep(2)
 
 driver.quit()
