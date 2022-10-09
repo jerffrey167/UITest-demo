@@ -21,11 +21,11 @@ item = driver.find_element(By.XPATH,'//*[@id="tta_srcsl"]').click()
 #点击打开下拉框
 item = Select(driver.find_element(By.XPATH,'//*[@id="tta_srcsl"]'))
 #获取下拉框选项
-item.select_by_index(2)
-# 选择下拉框的第二个内容
+item.select_by_index(3)
+# 选择下拉框的第3个内容
 sleep(2)
 item.select_by_value('zh-Hans')
-#选择 valu 为  zh-Hans 的选项
+#选择 value 为  zh-Hans 的选项
 sleep(2)
 item.select_by_visible_text('丹麦语')
 sleep(2)
