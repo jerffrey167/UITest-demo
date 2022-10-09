@@ -31,7 +31,6 @@ sleep(1)
 driver.find_element(By.CSS_SELECTOR,'input[placeholder="请选择"]').click()
 sleep(1)
 ExamSearch=driver.find_element(By.CSS_SELECTOR,"div[class='el-select-dropdown el-popper'][x-placement]")
-##################################勾选全选框
 ExamSearch1=ExamSearch.find_element(By.CSS_SELECTOR,"li.el-select-dropdown__item").click()
 sleep(1)
 ##################选择勾选框框
