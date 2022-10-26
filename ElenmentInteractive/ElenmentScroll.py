@@ -16,7 +16,7 @@ driver.find_element(By.ID,'su').click()
 #ID定位搜索按钮
 sleep(2)
 # 获取页面元素
-element = driver.find_element(By.XPATH,"//div[@class='c-color-t c-gap-bottom rs-label_ihUhK']")
+element = driver.find_element(By.XPATH,"//*[@id='rs_new']/div")
 # 移动元素element对象，与当前窗口的中心对齐
 ## 不需要增加括号
 element.location_once_scrolled_into_view
