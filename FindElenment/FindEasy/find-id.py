@@ -15,7 +15,6 @@ sleep(1)
 driver.find_element(By.ID,'su').click()
 #ID定位搜索按钮
 sleep(2)
-driver.close()
-#关闭浏览器器进程
+
 driver.quit()
 #关闭浏览器
