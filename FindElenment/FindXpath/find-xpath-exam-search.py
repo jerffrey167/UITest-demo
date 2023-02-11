@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
 #浏览器窗口最大化
-driver.get('http://120.46.215.163:8101/#/login')
+driver.get('http://120.46.215.163:8102/#/login')
 #浏览器打开考试系统
 sleep(2)
 driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('admin')
