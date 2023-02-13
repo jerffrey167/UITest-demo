@@ -28,6 +28,8 @@ driver.find_element(By.XPATH,"//a[text()='企业邮箱']").click()
 sleep(2)
 
 driver.switch_to.window(driver.window_handles[0])
+#切换浏览器窗口 0 是第一个窗口
+sleep(2)
 
 
 
