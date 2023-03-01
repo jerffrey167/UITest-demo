@@ -36,11 +36,6 @@ sleep(1)
 
 driver.find_element(By.XPATH,'//*[@aria-label="按照 时间不限 筛选"]').click()
 sleep(1)
-# 点击时间筛选框
-# driver.switch_to.active_element.find_element(By.XPATH,'//*[@id="d5136"]')
-# sleep(1)
-# driver.switch_to.active_element.find_element(By.XPATH,'//*[@id="infobubble_item_1_46C51D"]/div')
-sleep(1)
 driver.find_element(By.XPATH,'//*[@id="date_range_start"]').clear()
 sleep(1)
 driver.find_element(By.XPATH,'//*[@id="date_range_start"]').send_keys("2023/2/4")

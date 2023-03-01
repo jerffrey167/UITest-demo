@@ -15,6 +15,8 @@ driver.get('http://www.baidu.com')
 driver.find_element(By.ID,'kw').send_keys('id定位')
 #ID定位搜索框输入 selenium
 sleep(2)
+driver.find_element(By.ID,'kw').clear()
+sleep(1)
 driver.find_element(By.ID,'kw').send_keys('点点点')
 sleep(1)
 driver.find_element(By.ID,'kw').send_keys(Keys.ENTER)
