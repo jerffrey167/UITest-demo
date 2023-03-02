@@ -23,6 +23,8 @@ sleep(1)
 driver.switch_to.active_element.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
 driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').send_keys('1111')
 driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').send_keys('22222')
+driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__userName"]').clear()
+driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__password"]').clear()
 driver.find_element(By.XPATH,'//*[@id="TANGRAM__PSP_11__submit"]').click()
 
 sleep(2)
