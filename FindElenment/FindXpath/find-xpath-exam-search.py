@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
 #浏览器窗口最大化
-driver.get('http://120.46.215.163:8101/#/login)
+driver.get('http://120.46.215.163:8102/#/login')
 #浏览器打开考试系统
 sleep(2)
 driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('admin')
@@ -26,8 +26,7 @@ sleep(1)
 ######################考试类型搜索框
 driver.find_element(By.XPATH,'//input[@placeholder="开放类型"]').click()
 sleep(1)
-ExamSearch=driver.find_element(By.XPATH,"//div[@class='el-select-dropdown el-popper'and@x-placement]/div")
-ExamSearch1=driver.find_element(By.XPATH,"//span[text()='完全开放']//..").click()
+driver.find_element(By.XPATH,"//span[text()='完全开放']//..").click()
 sleep(1)
 ######################考试名称搜索框
 driver.find_element(By.XPATH,'//input[@placeholder="搜索考试名称"]').send_keys('演示考试')

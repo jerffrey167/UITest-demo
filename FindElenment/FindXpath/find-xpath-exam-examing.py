@@ -5,7 +5,7 @@ driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
 #浏览器窗口最大化
-driver.get('http://120.46.215.163:8101/#/login')
+driver.get('http://120.46.215.163:8102/#/login')
 #浏览器打开考试系统
 sleep(2)
 driver.find_element(By.XPATH,'//input[@type="text"]').send_keys('s2')
@@ -20,7 +20,9 @@ sleep(1)
 driver.find_element(By.XPATH,'//*[@id="screenfull"]/*[@class="svg-icon"]').click()
 sleep(1)
 driver.find_element(By.XPATH,"//*[starts-with(@style,'padding-left: 40px')]/span[text()='在线考试']").click()
+sleep(1)
 #点击在线考试页面
+driver.find_element(By.XPATH,'//input[@placeholder="搜索考试名称"]').send_keys('演示考试')
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()='去考试']").click()
 #点击去考试按钮
@@ -92,8 +94,9 @@ driver.find_element(By.XPATH,"//*[contains(text(),'B.')]//..").click()
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()=' 交卷 ']//..").click()
 sleep(1)
-element=driver.find_element(By.XPATH,"//*[@aria-label='提示']/div")
-element1=element.find_element(By.XPATH,"//*[@aria-label='提示']//button[2]").click()
+# element=driver.find_element(By.XPATH,"//*[@aria-label='提示']/div")
+# element1=element.find_element(By.XPATH,"//*[@aria-label='提示']//button[2]").click()
+driver.find_element(By.XPATH,"//*[@aria-label='提示']//button[2]").click()
 sleep(1)
 ################################账号注销
 driver.find_element(By.XPATH,"//div[text()=' 学员2 ']").click()

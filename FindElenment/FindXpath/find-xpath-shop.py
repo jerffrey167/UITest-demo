@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
 #浏览器窗口最大化
-driver.get('http://120.46.215.163')
+driver.get('http://120.46.215.163:82')
 #浏览器打开百度
 sleep(1)
 driver.find_element(By.XPATH,'//a[text()="登录"]').click()
@@ -31,7 +31,16 @@ driver.find_element(By.XPATH,"//input[@class='search-btn iconfont']").click()
 driver.find_element(By.XPATH,"//img[contains(@alt,'西门子')]").click()
 
 sleep(1)
-
+driver.switch_to.window(driver.window_handles[0])
+sleep(2)
+driver.switch_to.window(driver.window_handles[1])
+sleep(2)
+driver.switch_to.window(driver.window_handles[2])
+sleep(2)
+driver.switch_to.window(driver.window_handles[0])
+sleep(2)
+driver.switch_to.window(driver.window_handles[-1])
+sleep(2)
 driver.find_element(By.XPATH,'//*[text()="退出"]').click()
 ################## //img[starts-with(@alt,'西门子（SIEMENS）')]
 driver.close()

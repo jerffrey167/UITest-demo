@@ -25,4 +25,10 @@ driver.switch_to.default_content()
 ###############切换回主干页面
 driver.find_element(By.XPATH,"//a[text()='企业邮箱']").click()
 
+sleep(2)
+
+driver.switch_to.window(driver.window_handles[0])
+
+
+
 
