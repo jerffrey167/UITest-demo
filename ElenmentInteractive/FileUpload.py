@@ -1,7 +1,6 @@
 from  selenium import  webdriver
 from  selenium.webdriver.common.by import By
 from  time import  sleep
-from  time import  sleep
 driver = webdriver.Chrome()
 # 打开浏览器
 driver.maximize_window()
