@@ -46,4 +46,4 @@ driver.find_element(By.XPATH,'//*[text()="退出"]').click()
 driver.close()
 #关闭浏览器器进程
 driver.quit()
-#关闭浏览器
+# #关闭浏览器
