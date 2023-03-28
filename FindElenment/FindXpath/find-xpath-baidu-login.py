@@ -12,6 +12,7 @@ driver.get('https://www.baidu.com/')
 #浏览器打开baidu网站
 sleep(2)
 driver.find_element(By.XPATH,'//*[@id="s-top-loginbtn"]').click()
+
 #打开登录弹出框 
 sleep(1)
 # element=driver.find_element(By.XPATH,'//*[@id="passport-login-pop-api"]')
