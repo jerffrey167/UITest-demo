@@ -1,6 +1,7 @@
 from  selenium import  webdriver
 from  time import  sleep
 from  selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -11,9 +12,10 @@ driver.find_element(By.XPATH,'//input[@placeholder="密码"]').send_keys("123456
 driver.find_element(By.CSS_SELECTOR,'button[type]').click()
 driver.find_element(By.CSS_SELECTOR,"a[role='button'][class='introjs-skipbutton']").click()
 # 消除提示框
+sleep(5)
 driver.find_element(By.XPATH,"//span[text()='销售管理']/..").click()
 driver.find_element(By.XPATH,"//span[text()='销售订单']/..").click()
-
+####################################
 driver.find_element(By.XPATH,"//span[text()='新增']/..").click()
 driver.find_element(By.CSS_SELECTOR,"a[class='introjs-skipbutton']").click()
 # 消除提示框
@@ -35,13 +37,16 @@ driver.find_element(By.XPATH,'//input[@placeholder="请输入收取订金"]').se
 driver.find_element(By.XPATH,"//span[text()='保 存']/..").click()
 ########## 新增完成
 driver.find_element(By.XPATH,"//a[contains(text(),'展开')] ").click()
-driver.find_element(By.XPATH,"//*[@title='客户']/../../div[2]/div/span/div").click()
-
-driver.find_elements(By.XPATH,"ul[role='listbox'][tabindex='0']")
-driver.find_element(By.XPATH,"//li[contains(text(),'客户3')]").click()
+driver.find_element(By.XPATH,"//*[text()='选择客户']/..").click()
+ActionChains(driver).click(driver.find_element(By.XPATH,"//li[contains(text(),'客户2')]")).perform()
 sleep(1)
 driver.find_element(By.XPATH,"//span[text()='查 询']/..").click()
-sleep(22)
+sleep(1)
+driver.find_element(By.XPATH,"//span[contains(text(),'退出登录')]").click()
 
+driver.find_element(By.XPATH,"//span[contains(text(),'确 定')]/..").click()
 
+sleep(1)
+
+driver.quit()
 
