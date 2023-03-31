@@ -16,25 +16,25 @@ sleep(5)
 driver.find_element(By.XPATH,"//span[text()='销售管理']/..").click()
 driver.find_element(By.XPATH,"//span[text()='销售订单']/..").click()
 ####################################
-driver.find_element(By.XPATH,"//span[text()='新增']/..").click()
-driver.find_element(By.CSS_SELECTOR,"a[class='introjs-skipbutton']").click()
-# 消除提示框
-driver.find_element(By.XPATH,"//div[text()='选择客户']/..").click()
-driver.find_element(By.CSS_SELECTOR,"ul[role='listbox']>li:nth-child(1)").click()
-driver.find_element(By.CSS_SELECTOR,"i[class='anticon anticon-search ant-input-search-icon']").click()
-#弹出商品选择框
-driver.find_element(By.CSS_SELECTOR,"input[placeholder='条码、名称、规格、型号、颜色']").send_keys("商品test1")
-driver.find_element(By.XPATH,"//span[text()='新 增']/../..").click()
-sleep(1)
-driver.find_element(By.XPATH,"//*[@class='ant-modal']//descendant::input[4]").click()
-#勾选按钮
-driver.find_element(By.CSS_SELECTOR,"html button[type=button][class='ant-btn ant-btn-primary']:nth-child(2)").click()
-#确定按钮
-driver.find_element(By.CSS_SELECTOR,"input[id^='remark_jet']").send_keys("我新增第一条插入行的备注内容")
-driver.find_element(By.XPATH,'//*[@placeholder="请输入备注"]').send_keys("我新增条目的备注内容")
-driver.find_element(By.XPATH,'//input[@placeholder="请输入优惠率"]').send_keys("20")
-driver.find_element(By.XPATH,'//input[@placeholder="请输入收取订金"]').send_keys("10")
-driver.find_element(By.XPATH,"//span[text()='保 存']/..").click()
+# driver.find_element(By.XPATH,"//span[text()='新增']/..").click()
+# driver.find_element(By.CSS_SELECTOR,"a[class='introjs-skipbutton']").click()
+# # 消除提示框
+# driver.find_element(By.XPATH,"//div[text()='选择客户']/..").click()
+# driver.find_element(By.CSS_SELECTOR,"ul[role='listbox']>li:nth-child(1)").click()
+# driver.find_element(By.CSS_SELECTOR,"i[class='anticon anticon-search ant-input-search-icon']").click()
+# #弹出商品选择框
+# driver.find_element(By.CSS_SELECTOR,"input[placeholder='条码、名称、规格、型号、颜色']").send_keys("商品test1")
+# driver.find_element(By.XPATH,"//span[text()='新 增']/../..").click()
+# sleep(1)
+# driver.find_element(By.XPATH,"//*[@class='ant-modal']//descendant::input[4]").click()
+# #勾选按钮
+# driver.find_element(By.CSS_SELECTOR,"html button[type=button][class='ant-btn ant-btn-primary']:nth-child(2)").click()
+# #确定按钮
+# driver.find_element(By.CSS_SELECTOR,"input[id^='remark_jet']").send_keys("我新增第一条插入行的备注内容")
+# driver.find_element(By.XPATH,'//*[@placeholder="请输入备注"]').send_keys("我新增条目的备注内容")
+# driver.find_element(By.XPATH,'//input[@placeholder="请输入优惠率"]').send_keys("20")
+# driver.find_element(By.XPATH,'//input[@placeholder="请输入收取订金"]').send_keys("10")
+# driver.find_element(By.XPATH,"//span[text()='保 存']/..").click()
 ########## 新增完成
 driver.find_element(By.XPATH,"//a[contains(text(),'展开')] ").click()
 driver.find_element(By.XPATH,"//*[text()='选择客户']/..").click()
@@ -49,4 +49,3 @@ driver.find_element(By.XPATH,"//span[contains(text(),'确 定')]/..").click()
 sleep(1)
 
 driver.quit()
-
