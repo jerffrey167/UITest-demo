@@ -17,15 +17,15 @@ sleep(5)
 driver.find_element(By.XPATH,"//span[text()='销售管理']/..").click()
 driver.find_element(By.XPATH,"//span[text()='销售订单']/..").click()
 #############
-# driver.find_element(By.XPATH,"//a[contains(text(),'展开')] ").click()
-# driver.find_element(By.XPATH,"//*[text()='选择客户']/..").click()
-# sleep(2)
-# ActionChains(driver).send_keys(Keys.ENTER).perform()
+driver.find_element(By.XPATH,"//a[contains(text(),'展开')] ").click()
+driver.find_element(By.XPATH,"//*[text()='选择客户']/..").click()
+sleep(2)
+ActionChains(driver).send_keys(Keys.ENTER).perform()
 ####################################
 driver.find_element(By.XPATH,"//span[text()='新增']/..").click()
 driver.find_element(By.CSS_SELECTOR,"a[class='introjs-skipbutton']").click()
 # 消除提示框
-driver.find_element(By.XPATH,"//div[text()='选择客户']/..").click()
+driver.find_element(By.XPATH,"//div[@class='ant-modal-content']//descendant::div[text()='选择客户']").click()
 sleep(2)
 ActionChains(driver).send_keys(Keys.ENTER).perform()
 # driver.find_element(By.CSS_SELECTOR,"ul[role='listbox']>li:nth-child(1)").click()
@@ -45,7 +45,8 @@ driver.find_element(By.XPATH,'//input[@placeholder="请输入收取订金"]').se
 driver.find_element(By.XPATH,"//span[text()='保 存']/..").click()
 ########## 新增完成
 
-driver.find_element(By.XPATH,"//*[text()='选择客户']/..").click()
+
+driver.find_element(By.XPATH,"//div[@class='table-page-search-wrapper']//descendant::div[text()='选择客户']/..").click()
 sleep(2)
 
 ActionChains(driver).send_keys(Keys.ENTER).perform()
